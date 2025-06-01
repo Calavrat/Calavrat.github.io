@@ -1,156 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Профиль Хаматханова Салавата</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Хаматханов Салават</title>
   <style>
     body {
       background-color: #121212;
       color: white;
       font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
+
     h1, h2, h3 {
-      margin: 0;
+      margin: 0.5rem 0;
     }
-    .container {
-      text-align: center;
-    }
+
     .logo {
-      animation: spin 2s linear infinite;
-      width: 150px;
-      height: 150px;
+      animation: spin 4s linear infinite;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      background-color: transparent; /* Прозрачный фон */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
+
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    .tech-stack {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
+
+    svg.icon {
+      fill: white;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
     }
-    .tech-stack div {
-      background-color: #222;
-      border-radius: 8px;
-      padding: 15px;
-      width: 150px;
-      text-align: center;
-      color: white;
-      transition: transform 0.3s;
-    }
-    .tech-stack img {
-      filter: invert(1); /* Делаем иконки белыми */
-    }
-    .tech-stack div:hover {
+
+    svg.icon:hover {
       transform: scale(1.1);
     }
-    .contact {
-      margin-top: 20px;
+
+    .tech-stack {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 1rem;
+      margin-top: 2rem;
     }
-    .contact a {
-      background-color: #222;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .contact a:hover {
-      background-color: #444;
-    }
-    .projects {
-      margin-top: 20px;
-    }
-    .project-card {
-      background-color: #222;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 10px;
-      display: inline-block;
-      text-align: left;
-      color: white;
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: scale(1.05);
-    }
-    .stats {
-      margin-top: 20px;
-    }
-    .stats img {
-      max-width: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Логотип -->
-    <div class="logo">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"  alt="Python Logo" width="100"/>
-    </div>
-
-    <!-- Имя и описание -->
-    <h1>Хаматханов Салават</h1>
-    <h2>Ручной тестировщик | Junior Python Автотестировщик</h2>
-
-    <!-- Контакты -->
-    <div class="contact">
-      <a href="https://t.me/Calavat86"><img  src="https://simpleicons.org/icons/telegram.svg"  alt="Telegram" width="20"/> @Calavat86</a>
-      <a href="mailto:hamathanov64@yandex.ru"><img src="https://simpleicons.org/icons/gmail.svg"  alt="Email" width="20"/> hamathanov64@yandex.ru</a>
-    </div>
-
-    <!-- Технологический стек -->
-    <h3>Мой технологический стэк:</h3>
-    <div class="tech-stack">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"  alt="Python" width="50"/><br/>Python</div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg"  alt="Playwright" width="50"/><br/>Playwright</div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg"  alt="Pytest" width="50"/><br/>Pytest</div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"  alt="Git" width="50"/><br/>Git</div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"  alt="PostgreSQL" width="50"/><br/>PostgreSQL</div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"  alt="Golang" width="50"/><br/>Golang</div>
-    </div>
-
-    <!-- Проекты -->
-    <h3>Мои проекты:</h3>
-    <div class="projects">
-      <div class="project-card">
-        <h4><a href="https://github.com/Calavrat/PythonTasks">PythonTasks</a></h4> 
-        <p>Решение задач на Python.</p>
-      </div>
-      <div class="project-card">
-        <h4><a href="https://github.com/Calavrat/test_project_ui">UI  тесты с Playwright</a></h4>
-        <p>Тестирование UI с использованием Playwright.</p>
-      </div>
-      <div class="project-card">
-        <h4><a href="https://github.com/Calavrat/test_project_api">API  тесты</a></h4>
-        <p>Проверка API через Python.</p>
-      </div>
-    </div>
-
-    <!-- Статистика GitHub -->
-    <h3>Статистика GitHub:</h3>
-    <div class="stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=Calavrat&show_icons=true&theme=dark&include_all_commits=true" alt="GitHub Stats"/>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Calavrat&layout=compact&theme=dark" alt="Top Langs"/>
-    </div>
-  </div>
-</body>
-</html>
