@@ -5,17 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Хаматханов Салават</title>
   <style>
-    :root {
-      --accent-color: #795ef6;
-      --bg-color: #0f0f0f;
-      --text-color: #fff;
-      --card-bg: #1a1a1a;
-    }
-
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 2rem;
       display: flex;
@@ -23,24 +16,20 @@
       align-items: center;
     }
 
-    h1, h2, h3, p, a {
-      margin: 0.3rem 0;
+    h1, h2, h3 {
+      margin: 0.5rem 0;
     }
 
     .logo {
-      width: 150px;
-      height: 150px;
+      animation: spin 4s linear infinite;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      overflow: hidden;
-      animation: spin 5s linear infinite;
-      margin-bottom: 2rem;
-    }
-
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      background-color: transparent;
     }
 
     @keyframes spin {
@@ -48,75 +37,79 @@
       to { transform: rotate(360deg); }
     }
 
-    .section {
-      max-width: 700px;
-      width: 100%;
-      margin: 3rem 0;
-      padding: 2rem;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
+    svg.icon {
+      fill: white;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
     }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    svg.icon:hover {
+      transform: scale(1.1);
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100px;
+      font-weight: bold;
     }
 
     .contact {
+      margin-top: 2rem;
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 1rem;
     }
 
     .contact a {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background-color: #222;
+      color: white;
+      text-decoration: none;
+      background-color: #1e1e1e;
       padding: 0.75rem 1.25rem;
       border-radius: 8px;
-      text-decoration: none;
-      color: var(--accent-color);
-      font-weight: bold;
       transition: background-color 0.3s;
+      font-weight: bold;
     }
 
     .contact a:hover {
       background-color: #333;
     }
 
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .tech-item {
-      background-color: #222;
-      border-radius: 8px;
-      padding: 0.75rem 1.25rem;
-      font-weight: bold;
-      color: white;
+    .section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 800px;
     }
 
     .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      max-width: 600px;
+      width: 100%;
     }
 
     .project-card {
-      background-color: #222;
+      background-color: #1e1e1e;
       border-radius: 8px;
       padding: 1rem;
+      margin: 0.5rem 0;
+      color: white;
       transition: transform 0.3s;
     }
 
@@ -124,17 +117,12 @@
       transform: scale(1.02);
     }
 
-    .project-card h4 {
-      margin-bottom: 0.5rem;
+    .stats {
+      margin-top: 2rem;
     }
 
-    .project-card a {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-
-    .project-card p {
-      color: #aaa;
+    .stats img {
+      max-width: 100%;
     }
   </style>
 </head>
@@ -142,7 +130,9 @@
 
   <!-- Логотип -->
   <div class="logo">
-    <img src="https://avatars.githubusercontent.com/Calavrat"  alt="Аватар" />
+    <svg class="icon" viewBox="0 0 24 24">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
   </div>
 
   <!-- Имя и описание -->
@@ -151,27 +141,71 @@
 
   <!-- Контакты -->
   <div class="section contact">
-    <h3>Контакты</h3>
-    <div class="contact">
-      <a href="https://t.me/Calavat86">Telegram</a> 
-      <a href="mailto:hamathanov64@yandex.ru">Email</a>
-    </div>
+    <h3 style="margin-bottom: 1rem;">Контакты</h3>
+    <a href="https://t.me/Calavat86"> 
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        <path d="M9.9 16.5l4.5-3.4-4.5-2.6v5.9z"/>
+      </svg>
+      Telegram
+    </a>
+    <a href="mailto:hamathanov64@yandex.ru">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      Email
+    </a>
   </div>
 
   <!-- Технологии -->
   <div class="section tech-stack">
-    <h3>Мой технологический стэк</h3>
-    <div class="tech-item">Python</div>
-    <div class="tech-item">Playwright</div>
-    <div class="tech-item">Pytest</div>
-    <div class="tech-item">Git</div>
-    <div class="tech-item">PostgreSQL</div>
-    <div class="tech-item">Golang</div>
+    <h3 style="margin-bottom: 1rem;">Мой технологический стэк</h3>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      Python
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M10 10h4v8h-4z"/>
+      </svg>
+      Playwright
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M12 8v4l2.5 2.5"/>
+      </svg>
+      Pytest
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm0 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z"/>
+        <path d="M12 10h4v4h-4z"/>
+      </svg>
+      Git
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      PostgreSQL
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M10 10h4v4H10z"/>
+      </svg>
+      Golang
+    </div>
   </div>
 
   <!-- Проекты -->
   <div class="section projects">
-    <h3>Мои проекты</h3>
+    <h3 style="margin-bottom: 1rem;">Мои проекты</h3>
     <div class="project-card">
       <h4><a href="https://github.com/Calavrat/PythonTasks">PythonTasks</a></h4> 
       <p>Решение задач на Python.</p>
@@ -184,6 +218,13 @@
       <h4><a href="https://github.com/Calavrat/test_project_api">API  тесты</a></h4>
       <p>Проверка API через Python.</p>
     </div>
+  </div>
+
+  <!-- Статистика GitHub -->
+  <div class="section stats">
+    <h3 style="margin-bottom: 1rem;">Статистика GitHub</h3>
+    <img src="https://github-readme-stats.vercel.app/api?username=Calavrat&show_icons=true&theme=dark&include_all_commits=true" alt="GitHub Stats"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Calavrat&layout=compact&theme=dark" alt="Top Langs"/>
   </div>
 
 </body>
