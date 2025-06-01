@@ -54,3 +54,164 @@
       gap: 1rem;
       margin-top: 2rem;
     }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100px;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .contact a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+      background-color: #1e1e1e;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .contact a:hover {
+      background-color: #333;
+    }
+
+    .projects {
+      margin-top: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .project-card {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      color: white;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .stats {
+      margin-top: 2rem;
+    }
+
+    .stats img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Логотип -->
+  <div class="logo">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
+  </div>
+
+  <!-- Имя и описание -->
+  <h1>Хаматханов Салават</h1>
+  <h2>Ручной тестировщик | Junior Python Автотестировщик</h2>
+
+  <!-- Контакты -->
+  <div class="contact">
+    <a href="https://t.me/Calavat86"> 
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        <path d="M9.9 16.5l4.5-3.4-4.5-2.6v5.9z"/>
+      </svg>
+      Telegram
+    </a>
+    <a href="mailto:hamathanov64@yandex.ru">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      Email
+    </a>
+  </div>
+
+  <!-- Технологии -->
+  <h3>Мой технологический стэк:</h3>
+  <div class="tech-stack">
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      Python
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M10 10h4v8h-4z"/>
+      </svg>
+      Playwright
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M12 8v4l2.5 2.5"/>
+      </svg>
+      Pytest
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm0 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z"/>
+        <path d="M12 10h4v4h-4z"/>
+      </svg>
+      Git
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      PostgreSQL
+    </div>
+    <div class="tech-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+        <path d="M10 10h4v4H10z"/>
+      </svg>
+      Golang
+    </div>
+  </div>
+
+  <!-- Проекты -->
+  <h3>Мои проекты:</h3>
+  <div class="projects">
+    <div class="project-card">
+      <h4><a href="https://github.com/Calavrat/PythonTasks">PythonTasks</a></h4> 
+      <p>Решение задач на Python.</p>
+    </div>
+    <div class="project-card">
+      <h4><a href="https://github.com/Calavrat/test_project_ui">UI  тесты с Playwright</a></h4>
+      <p>Тестирование UI с использованием Playwright.</p>
+    </div>
+    <div class="project-card">
+      <h4><a href="https://github.com/Calavrat/test_project_api">API  тесты</a></h4>
+      <p>Проверка API через Python.</p>
+    </div>
+  </div>
+
+  <!-- Статистика GitHub -->
+  <h3>Статистика GitHub:</h3>
+  <div class="stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=Calavrat&show_icons=true&theme=dark&include_all_commits=true" alt="GitHub Stats"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Calavrat&layout=compact&theme=dark" alt="Top Langs"/>
+  </div>
+
+</body>
+</html>
